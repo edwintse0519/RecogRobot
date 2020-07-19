@@ -2,10 +2,9 @@ import cv2
 import numpy as np
 from firebase import firebase
 import time
+#change the website in the bracket down below
+cap = cv2.VideoCapture('https://192.168.0.102:8080/video')
 
-#cap = cv2.VideoCapture('https://192.168.0.102:8080/video')
-#cap = cv2.VideoCapture('https://192.168.1.38:8080/video')
-cap = cv2.VideoCapture(0)
 
 dim_120 = (120, 120)   #around 1 board
 
@@ -15,7 +14,9 @@ dim_130 = (130, 130)
 # for character F, normal and cropped with different sizes(75x75;90x90;100x100)
 template_F = cv2.imread('F_copy.jpg', cv2.IMREAD_GRAYSCALE)
 template_F_crop = cv2.imread('crop_F.jpg', cv2.IMREAD_GRAYSCALE)
-
+#cap = cv2.VideoCapture('https://192.168.0.102:8080/video')
+#cap = cv2.VideoCapture('https://192.168.1.38:8080/video')
+cap = cv2.VideoCapture(0)
 resized_F120 = cv2.resize(template_F, dim_120, interpolation=cv2.INTER_AREA)
 resized_F120_crop = cv2.resize(template_F_crop, dim_120, interpolation=cv2.INTER_AREA)
 
