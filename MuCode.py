@@ -11,9 +11,9 @@ import time
 import network
 #import sb_config
 
+#enter your wifi SSID and the password respectively within ""  on line 15
+res = wifi_connect("", "", trytime=10)
 
-res = wifi_connect("WINSTARS", "28092299", trytime=10)
-#res = wifi_connect("WallaceTse", "beverlygarden", trytime=10)
 
 if not res:
     display.scroll('Err')
