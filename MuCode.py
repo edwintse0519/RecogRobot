@@ -11,8 +11,8 @@ import time
 import network
 #import sb_config
 
-#enter your wifi SSID and the password respectively within ""  on line 15
-res = wifi_connect("", "", trytime=10)
+
+res = wifi_connect("WINSTARS", "28092299", trytime=10)
 
 
 if not res:
@@ -28,10 +28,9 @@ m1 = DCMotor('M1')
 m2 = DCMotor('M2')
 turnedLeft=False
 turnedRight=False
-result={'PIC': {'character': '"S"'}}
+
 
 while True:
-    # response = firebase.get('https://ai-camera-5f64e.firebaseio.com/')
     result=firebase.get("ai-camera-5f64e")
     print(result)
 
