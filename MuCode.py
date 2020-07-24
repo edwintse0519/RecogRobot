@@ -28,9 +28,10 @@ m1 = DCMotor('M1')
 m2 = DCMotor('M2')
 turnedLeft=False
 turnedRight=False
-
+result={'PIC': {'character': '"S"'}}
 
 while True:
+    # response = firebase.get('https://ai-camera-5f64e.firebaseio.com/')
     result=firebase.get("ai-camera-5f64e")
     print(result)
 
@@ -80,8 +81,8 @@ while True:
             m1.stop()
             m2.stop()
         else:
-            m1.power(0)
-            m2.power(50)
+            m1.power(50)
+            m2.power(0)
             m1.ccw()
             m2.ccw()
             time.sleep(4.5)
